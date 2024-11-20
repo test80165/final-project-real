@@ -25,7 +25,7 @@ public class Delivery {
 
     private String address;
 
-    private String quantity;
+    private Integer quantity;
 
     private String status;
 

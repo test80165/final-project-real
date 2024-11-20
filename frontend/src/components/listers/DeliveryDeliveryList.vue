@@ -127,7 +127,7 @@
                 'orderId': 0,
                 'userId': '',
                 'address': '',
-                'quantity': '',
+                'quantity': 0,
                 'status': '',
                 'productId': 0,
             }
