@@ -61,20 +61,22 @@ public class Inventory {
         stockDecreased.publishAfterCommit();
         */
 
-        /** Example 2:  finding and process
         
-        repository().findById(orderPlaced.get???()).ifPresent(inventory->{
+        repository().findById(orderPlaced.getProductId()).ifPresent(inventory->{
             
-            inventory // do something
-            repository().save(inventory);
+            // repository().save(inventory);
 
-            OutOfStock outOfStock = new OutOfStock(inventory);
-            outOfStock.publishAfterCommit();
-            StockDecreased stockDecreased = new StockDecreased(inventory);
-            stockDecreased.publishAfterCommit();
+            // OutOfStock outOfStock = new OutOfStock(inventory);
+            // outOfStock.publishAfterCommit();
+            // StockDecreased stockDecreased = new StockDecreased(inventory);
+            // stockDecreased.publishAfterCommit();
+            
+            // 잔여량에서 주문한 갯수 뺴기.
+            inventory.setStockCount(inventory.getStockCount() - orderPlaced.getQuantity());
+            repository().save(inventory); // 더티체킹이라 굳이 필요 없는 로직임.
 
          });
-        */
+        
 
     }
 

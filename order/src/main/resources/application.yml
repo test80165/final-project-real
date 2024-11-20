@@ -63,7 +63,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: my-kafka:9092
+          # brokers: my-kafka:9092
+          brokers: localhost:9092
         streams:
           binder:
             configuration:
@@ -76,9 +77,11 @@ spring:
         event-in:
           group: order
           destination: untitled
+          # destination: order
           contentType: application/json
         event-out:
           destination: untitled
+          # destination: inventory
           contentType: application/json
 
 

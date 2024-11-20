@@ -31,7 +31,7 @@ public class Order {
 
     @PostPersist
     public void onPostPersist() {
-        OrderPlaced orderPlaced = new OrderPlaced(this);
+        OrderPlaced orderPlaced = new OrderPlaced(this);    
         orderPlaced.publishAfterCommit();
     }
 

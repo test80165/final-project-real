@@ -31,12 +31,14 @@ spring:
         event-in:
           group: inventory
 #<<< EDA / Topic Name
-          destination: untitled
+          destination: inventory
+          # destination: delivery
 #>>> EDA / Topic Name
           contentType: application/json
         event-out:
 #<<< EDA / Topic Name
-          destination: untitled
+          destination: delivery
+          # destination: delivery
 #>>> EDA / Topic Name
           contentType: application/json
 
@@ -80,9 +82,11 @@ spring:
         event-in:
           group: inventory
           destination: untitled
+          # destination: order
           contentType: application/json
         event-out:
           destination: untitled
+          # destination: delivery
           contentType: application/json
 
 api:
