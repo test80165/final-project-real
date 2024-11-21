@@ -21,7 +21,7 @@ public class Delivery {
 
     private Long orderId;
 
-    private String userId;
+    private Long userId;
 
     private String address;
 
@@ -33,11 +33,16 @@ public class Delivery {
 
     @PostPersist
     public void onPostPersist() {
-        DeliveryCanceled deliveryCanceled = new DeliveryCanceled(this);
-        deliveryCanceled.publishAfterCommit();
 
         DeliveryStarted deliveryStarted = new DeliveryStarted(this);
         deliveryStarted.publishAfterCommit();
+    }
+
+    @PostRemove
+    public void onPostRemove(){
+        DeliveryCanceled deliveryCanceled = new DeliveryCanceled(this);
+        deliveryCanceled.publishAfterCommit();
+
     }
 
     public static DeliveryRepository repository() {
@@ -75,6 +80,16 @@ public class Delivery {
 
          });
         */
+        Delivery delivery = new Delivery();
+        delivery.setOrderId(stockDecreased.getOrderId()); // 주문id
+        delivery.setUserId(1L);
+        delivery.setAddress("address1");
+        delivery.setQuantity(stockDecreased.getStockCount().intValue());
+        delivery.setStatus("배송중");
+        delivery.setProductId(stockDecreased.getId()); // 상품ID
+
+        repository().save(delivery);
+
 
     }
 
@@ -103,6 +118,9 @@ public class Delivery {
 
          });
         */
+
+        System.out.println("insert Test ++++++++++++++++++");
+        repository().deleteByOrderId(orderCanceled.getId());
 
     }
     //>>> Clean Arch / Port Method

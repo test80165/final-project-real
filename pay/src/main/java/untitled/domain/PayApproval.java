@@ -13,7 +13,7 @@ public class PayApproval extends AbstractEvent {
 
     private Long id;
     private Integer payAmount;
-    private String userId;
+    private Long userId;
     private String status;
     private Integer point;
 

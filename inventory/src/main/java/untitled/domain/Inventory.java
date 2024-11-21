@@ -27,9 +27,11 @@ public class Inventory {
     private String status;
 
     private Integer price;
+    
+    private Integer orderId;
 
-    @PostPersist
-    public void onPostPersist() {
+    @PostUpdate
+    public void onPostUpdate() {
         OutOfStock outOfStock = new OutOfStock(this);
         outOfStock.publishAfterCommit();
 
@@ -75,6 +77,13 @@ public class Inventory {
 
          });
         */
+
+        repository().findById(orderPlaced.getProductId()).ifPresent(inventory -> {
+
+            inventory.setStockCount(inventory.getStockCount() - orderPlaced.getQuantity());
+            repository().save(inventory);
+
+        });
 
     }
 

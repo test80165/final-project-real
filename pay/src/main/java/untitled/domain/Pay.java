@@ -21,7 +21,7 @@ public class Pay {
 
     private Integer payAmount;
 
-    private String userId;
+    private Long userId;
 
     private String status;
 
@@ -29,8 +29,8 @@ public class Pay {
 
     @PostPersist
     public void onPostPersist() {
-        PayApproval payApproval = new PayApproval(this);
-        payApproval.publishAfterCommit();
+        // PayApproval payApproval = new PayApproval(this);
+        // payApproval.publishAfterCommit();
 
         PayCanceled payCanceled = new PayCanceled(this);
         payCanceled.publishAfterCommit();
@@ -72,6 +72,17 @@ public class Pay {
          });
         */
 
+        repository().findByUserId(orderPlaced.getUserId()).ifPresent(pay -> {
+
+            int stockTotalPrice = orderPlaced.getPrice() * orderPlaced.getQuantity();
+
+            if(pay.getPayAmount() - stockTotalPrice < 0) return;
+
+            pay.setPayAmount(pay.getPayAmount() - stockTotalPrice);
+            repository().save(pay);
+
+        });
+
     }
 
     //>>> Clean Arch / Port Method
@@ -99,6 +110,16 @@ public class Pay {
 
          });
         */
+
+        // 주문 취소되면 원래 가격만큼 계좌에 추가.
+        repository().findById(orderCanceled.getUserId()).ifPresent(pay -> {
+
+            int stockTotalPrice = orderCanceled.getPrice() * orderCanceled.getQuantity();
+
+            pay.setPayAmount(pay.getPayAmount() + stockTotalPrice);
+            repository().save(pay);
+
+        });
 
     }
     //>>> Clean Arch / Port Method

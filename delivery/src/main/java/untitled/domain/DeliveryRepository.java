@@ -1,6 +1,7 @@
 package untitled.domain;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import untitled.domain.*;
 
@@ -10,4 +11,8 @@ import untitled.domain.*;
     path = "deliveries"
 )
 public interface DeliveryRepository
-    extends PagingAndSortingRepository<Delivery, Long> {}
+    extends PagingAndSortingRepository<Delivery, Long> {
+
+        
+        void deleteByOrderId(@Param("orderId")long orderId);
+    }

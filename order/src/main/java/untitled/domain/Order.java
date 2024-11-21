@@ -23,7 +23,7 @@ public class Order {
 
     private Integer quantity;
 
-    private String userId;
+    private Long userId;
 
     private String status;
 
