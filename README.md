@@ -151,7 +151,30 @@ www.msaez.io/#/188553391/storming/final-project
 
 ## 환경분리 - configMap/secret
 
+### configMap yaml
+<img width="290" alt="스크린샷 2024-11-22 오전 1 12 21" src="https://github.com/user-attachments/assets/8dcbf5ec-c224-4ef7-a33e-139e91f278d4">
+
+### 파일 공유 방식을 사용해서 여러 레플리카가 동일한 configMap 파일을 공유하도록 함.
+=> 해당 파일을 통해 설정 값 사용 가능
+<img width="1130" alt="스크린샷 2024-11-22 오전 1 13 08" src="https://github.com/user-attachments/assets/f9e09fc0-77cf-4cac-9d08-052c17c48649">
+
 ## PVC
+
+### NFS 생성
+=> NFS 방식으로 생성한 후, 두 레플리카가 서로 파일을 공유하는지 확인함.
+<img width="1229" alt="스크린샷 2024-11-22 오전 1 41 01" src="https://github.com/user-attachments/assets/0bc4b841-50cb-47e0-b2cf-8338f34c8a1b">
+
+### order 컨테이너에 마운트를 위한 설정파일
+
+<img width="261" alt="스크린샷 2024-11-22 오전 1 42 52" src="https://github.com/user-attachments/assets/79b98047-bcb8-47bc-8f34-99d46abd48ca">
+
+### 1번 레플리카에 파일 생성
+
+<img width="864" alt="스크린샷 2024-11-22 오전 1 48 07" src="https://github.com/user-attachments/assets/ba22c075-e05a-4127-a48c-2f9802cfe695">
+
+### 2번 레플리카에 파일생성확인
+
+<img width="734" alt="스크린샷 2024-11-22 오전 1 48 30" src="https://github.com/user-attachments/assets/7ab59639-5341-411e-a91d-bb607f6f5a26">
 
 ## 서비스 매쉬
 
