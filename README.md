@@ -179,3 +179,17 @@ www.msaez.io/#/188553391/storming/final-project
 ## 서비스 매쉬
 
 ## 모니터링
+
+### loki stack 설치
+
+<img width="579" alt="스크린샷 2024-11-22 오전 1 56 48" src="https://github.com/user-attachments/assets/8f278154-2b11-46fd-a7b8-9251e33458e8">
+
+<img width="632" alt="스크린샷 2024-11-22 오전 1 57 21" src="https://github.com/user-attachments/assets/60eec3e7-f3b3-46b7-96ae-7d68bc926f56">
+
+### loki 
+
+<img width="1622" alt="스크린샷 2024-11-22 오전 2 15 57" src="https://github.com/user-attachments/assets/3ee31366-dad3-4a1e-af71-89003f0da483">
+
+### grafana 기본 템플릿을 이용한 부하 모니터링 
+
+<img width="1907" alt="스크린샷 2024-11-22 오전 2 28 12" src="https://github.com/user-attachments/assets/8b7734af-97ba-4c9a-94e1-29d20e343277">
