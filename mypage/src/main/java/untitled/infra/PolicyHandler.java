@@ -18,6 +18,9 @@ import untitled.domain.*;
 public class PolicyHandler {
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void whatever(@Payload String eventString) {}
+    public void whatever(@Payload String eventString) {
+
+        
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

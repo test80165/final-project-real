@@ -14,5 +14,5 @@ public interface DeliveryRepository
     extends PagingAndSortingRepository<Delivery, Long> {
 
         
-        void deleteByOrderId(@Param("orderId")long orderId);
+        void deleteByOrderId(@Param("orderId")Long orderId);
     }

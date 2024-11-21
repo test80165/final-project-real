@@ -16,9 +16,12 @@ spec:
     spec:
       containers:
         - name: order
-          image: "username/order:latest"
+          image: "user11.azurecr.io/order:latest"
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: "200m"
           readinessProbe:
             httpGet:
               path: '/actuator/health'

@@ -24,7 +24,7 @@ spring:
         - id: mypage
           uri: http://localhost:8085
           predicates:
-            - Path=, 
+            - Path=/mypages/**
         - id: pay
           uri: http://localhost:8086
           predicates:

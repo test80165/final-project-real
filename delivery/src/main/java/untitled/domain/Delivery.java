@@ -84,8 +84,8 @@ public class Delivery {
         delivery.setOrderId(stockDecreased.getOrderId()); // 주문id
         delivery.setUserId(1L);
         delivery.setAddress("address1");
-        delivery.setQuantity(stockDecreased.getStockCount().intValue());
         delivery.setStatus("배송중");
+        delivery.setQuantity(10);
         delivery.setProductId(stockDecreased.getId()); // 상품ID
 
         repository().save(delivery);
@@ -119,7 +119,8 @@ public class Delivery {
          });
         */
 
-        System.out.println("insert Test ++++++++++++++++++");
+        System.out.println("insert Test ++++++++++++++++++ : " + orderCanceled.getId());
+        
         repository().deleteByOrderId(orderCanceled.getId());
 
     }

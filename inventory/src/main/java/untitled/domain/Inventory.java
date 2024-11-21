@@ -3,6 +3,8 @@ package untitled.domain;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.LongAccumulator;
+
 import javax.persistence.*;
 import lombok.Data;
 import untitled.InventoryApplication;
@@ -28,7 +30,7 @@ public class Inventory {
 
     private Integer price;
     
-    private Integer orderId;
+    private Long orderId;
 
     @PostUpdate
     public void onPostUpdate() {
@@ -112,6 +114,12 @@ public class Inventory {
 
          });
         */
+        repository().findById(deliveryCanceled.getProductId()).ifPresent(inventory -> {
+
+            inventory.setStockCount(inventory.getStockCount() + 10);
+            repository().save(inventory);
+
+        });
 
     }
     //>>> Clean Arch / Port Method
