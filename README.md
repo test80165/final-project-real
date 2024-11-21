@@ -117,6 +117,9 @@ www.msaez.io/#/188553391/storming/final-project
 ### 기존 파드가 종료되고 새로운 파드가 실행됨.
 <img width="536" alt="스크린샷 2024-11-21 오후 5 24 13" src="https://github.com/user-attachments/assets/d95aaa4a-6885-429b-b3f2-9fb0c0442a7c">
 
+##CI/CD 트리거 동작확인 - 리드미 수정.
+<img width="1136" alt="스크린샷 2024-11-21 오후 5 26 07" src="https://github.com/user-attachments/assets/89370753-5941-4475-8e16-b64c6e08dec6">
+
 ## 컨테이너 자동확장(auto scale out)
 
 ### 기본 오더 파드 상태
