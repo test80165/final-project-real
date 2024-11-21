@@ -45,16 +45,19 @@ www.msaez.io/#/188553391/storming/final-project
 3) pay잔액 감소 확인
    
 => 1000 * 10 = 10000원 구매하여 잔액이 989999로 감소
+
 <img width="632" alt="스크린샷 2024-11-21 오후 1 44 21" src="https://github.com/user-attachments/assets/6077d916-aea2-49b5-aa9a-16ef5bfb8ea8">
    
 5) 상품 개수 감소 확인
    
 => 상품 10개 구매하여 990개로 감소
+
 <img width="556" alt="스크린샷 2024-11-21 오후 1 44 11" src="https://github.com/user-attachments/assets/15b34220-688e-4964-a27a-a13c82dd569a">
    
 7) 배송 히스토리 추가 확인
    
 => 주문한 상품 히스토리 추가됨.
+
 <img width="650" alt="스크린샷 2024-11-21 오후 1 43 55" src="https://github.com/user-attachments/assets/f6ea1bd3-9094-4484-963d-c9e5983babe5">
 
 
@@ -62,15 +65,48 @@ www.msaez.io/#/188553391/storming/final-project
 1) 상품주문 취소
    
 => 오더 서비스 쪽에 주문취소 요청
+
 <img width="653" alt="스크린샷 2024-11-21 오후 1 52 56" src="https://github.com/user-attachments/assets/5a9ad852-28a3-45e7-acfd-267f5f19e278">
+
 2) 인벤토리 상품 개수 원복
 
 => 구매한 상품 10개가 취소되어 다시 1000개로 조회됨
+
 <img width="622" alt="스크린샷 2024-11-21 오후 1 53 33" src="https://github.com/user-attachments/assets/9d2e8e15-66d1-44cb-8194-b0d9776bf497">
+
 3) pay잔액 복구 확인.
 
 => 사용한 10000원 잔액이 복구되어 999999로 조회됨
+
 <img width="582" alt="스크린샷 2024-11-21 오후 1 53 11" src="https://github.com/user-attachments/assets/fad30bcf-7f20-4824-8529-380edb6433a3">
+
+
+## CQRS로 주문상태 조회
+1) 상품 주문
+
+=> 상품 두번 주문
+
+<img width="909" alt="스크린샷 2024-11-21 오후 2 14 08" src="https://github.com/user-attachments/assets/8af2b81b-c844-4101-a4ff-4981752b5027">
+
+<img width="911" alt="스크린샷 2024-11-21 오후 2 16 02" src="https://github.com/user-attachments/assets/7982565c-60f3-40ba-9bf5-21c7b4bf53b6">
+
+2) 마이페이지에서 주문 조회
+
+ => gateway를 통해 마이페이지에서 두개의 주문 이력확인.
+
+<img width="578" alt="스크린샷 2024-11-21 오후 2 15 35" src="https://github.com/user-attachments/assets/f4e40678-ea1c-4c6f-9fee-32871d0a7bcf">
+
+3) order 서비스 종료
+
+ => 주문 서비스 종료후, 호출 안되는 것 확인.
+
+<img width="906" alt="스크린샷 2024-11-21 오후 2 16 26" src="https://github.com/user-attachments/assets/1af97609-1c89-4d47-8b19-d1280e5bfb4c">
+   
+4) 종료후에도 마이페이지에서 주문 이력 조회되는 것 확인
+ 
+=> gateway통해서 호출했을때, 마이페이지에서는 정상 조회
+
+<img width="910" alt="스크린샷 2024-11-21 오후 2 16 59" src="https://github.com/user-attachments/assets/5f4daa68-056c-43a1-a8fb-b1d3f566ef00">
 
 ## 클라우드 배포 - Container 운영
 
