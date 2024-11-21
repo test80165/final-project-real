@@ -109,6 +109,15 @@ www.msaez.io/#/188553391/storming/final-project
 <img width="910" alt="스크린샷 2024-11-21 오후 2 16 59" src="https://github.com/user-attachments/assets/5f4daa68-056c-43a1-a8fb-b1d3f566ef00">
 
 ## 클라우드 배포 - Container 운영
+* AZURE DEVOPS CI/CD를 사용하여 진행하엿습니다.
+### CI 설정
+<img width="1109" alt="스크린샷 2024-11-21 오후 5 22 27" src="https://github.com/user-attachments/assets/c0623187-b009-4c1e-9812-7a9d70090ae1">
+
+### CD 설정
+<img width="643" alt="스크린샷 2024-11-21 오후 5 23 54" src="https://github.com/user-attachments/assets/c4a6f431-7cb3-47db-adb2-ea3d7a960749">
+
+### 기존 파드가 종료되고 새로운 파드가 실행됨.
+<img width="536" alt="스크린샷 2024-11-21 오후 5 24 13" src="https://github.com/user-attachments/assets/d95aaa4a-6885-429b-b3f2-9fb0c0442a7c">
 
 ## 컨테이너 자동확장(auto scale out)
 
