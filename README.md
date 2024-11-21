@@ -110,104 +110,16 @@ www.msaez.io/#/188553391/storming/final-project
 
 ## 클라우드 배포 - Container 운영
 
-## 컨테이너 자동확장
- 
+## 컨테이너 자동확장(auto scale out)
 
-## Model
-www.msaez.io/#/188553391/storming/final-project
- 
+### 기본 오더 파드 상태
+<img width="497" alt="스크린샷 2024-11-21 오후 4 20 37" src="https://github.com/user-attachments/assets/04be967a-a400-49c3-867a-0b7bcaffb63d">
 
-## Model
-www.msaez.io/#/188553391/storming/final-project
+### hpa로 cpu 측정
+<img width="510" alt="스크린샷 2024-11-21 오후 4 21 24" src="https://github.com/user-attachments/assets/6219bf83-3441-4024-8bb5-41cd3d2bd91d">
 
-## Before Running Services
-### Make sure there is a Kafka server running
-```
-cd kafka
-docker-compose up
-```
-- Check the Kafka messages:
-```
-cd infra
-docker-compose exec -it kafka /bin/bash
-cd /bin
-./kafka-console-consumer --bootstrap-server localhost:9092 --topic
-```
+## siege로 부하주었을때 파드 최대 3개까지 늘어남
+<img width="519" alt="스크린샷 2024-11-21 오후 4 22 42" src="https://github.com/user-attachments/assets/45d4bb25-2e75-44ad-84ed-2265f5474e01">
 
-## Run the backend micro-services
-See the README.md files inside the each microservices directory:
-
-- order
-- inventory
-- delivery
-- mypage
-- pay
-
-
-## Run API Gateway (Spring Gateway)
-```
-cd gateway
-mvn spring-boot:run
-```
-
-## Test by API
-- order
-```
- http :8088/orders id="id" productId="productId" quantity="quantity" userId="userId" status="status" price="price" 
-```
-- inventory
-```
- http :8088/inventories id="id" stockName="stockName" stockCount="stockCount" status="status" price="price" 
-```
-- delivery
-```
- http :8088/deliveries id="id" orderId="orderId" userId="userId" address="address" quantity="quantity" status="status" productId="productId" 
-```
-- mypage
-```
-```
-- pay
-```
- http :8088/pays id="id" payAmount="payAmount" userId="userId" status="status" point="point" 
-```
-
-
-## Run the frontend
-```
-cd frontend
-npm i
-npm run serve
-```
-
-## Test by UI
-Open a browser to localhost:8088
-
-## Required Utilities
-
-- httpie (alternative for curl / POSTMAN) and network utils
-```
-sudo apt-get update
-sudo apt-get install net-tools
-sudo apt install iputils-ping
-pip install httpie
-```
-
-- kubernetes utilities (kubectl)
-```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-```
-
-- aws cli (aws)
-```
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-
-- eksctl 
-```
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-```
-
+## hpa로 확인
+<img width="530" alt="스크린샷 2024-11-21 오후 4 23 26" src="https://github.com/user-attachments/assets/e3346884-e4f5-44c4-ac6d-a811d7bd8b5f">
