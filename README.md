@@ -26,23 +26,29 @@ www.msaez.io/#/188553391/storming/final-project
 
 ## gateway를 통한 서비스 호출
 ### 초기화
-1) 상품 추가.
+1) 상품 추가
+   => 가격 1000원짜리 상품 1000개 추가
    <img width="920" alt="스크린샷 2024-11-21 오후 1 19 26" src="https://github.com/user-attachments/assets/c1228678-f5b8-41da-8b08-5fe30b812d8d">
    
 3) 사용자의 pay잔액 추가
+   => 사용자 잔액 999999 추가
    <img width="915" alt="스크린샷 2024-11-21 오후 1 19 02" src="https://github.com/user-attachments/assets/4659fcc8-b404-45f9-a538-103c0e6ab6da">
 
 ### pub/sub 구조의 기본 주문 과정
-1) 상품주문 
+1) 상품주문
+   => 가격 1000원짜리 상품 10개를 주문 - 총 10000원
    <img width="915" alt="스크린샷 2024-11-21 오후 1 19 38" src="https://github.com/user-attachments/assets/2d67c73d-13bd-48d4-90d0-f52e426c8b6b">
    
 3) pay잔액 감소 확인
+   => 1000 * 10 = 10000원 구매하여 잔액이 989999로 감소
    <img width="721" alt="스크린샷 2024-11-21 오후 1 20 10" src="https://github.com/user-attachments/assets/3d6b13fa-ea97-4256-939e-09a79b450df7">
    
 5) 상품 개수 감소 확인
+   => 상품 10개 구매하여 990개로 감소
    <img width="631" alt="스크린샷 2024-11-21 오후 1 20 23" src="https://github.com/user-attachments/assets/3a52b14f-7315-4b3e-a733-1aca597e7322">
    
 7) 배송 히스토리 추가 확인
+   => 주문한 상품 히스토리 추가됨.
    <img width="802" alt="스크린샷 2024-11-21 오후 1 19 55" src="https://github.com/user-attachments/assets/f9a795d8-ad1e-4ff2-a4cc-db5e6ca73f68">
 
 
