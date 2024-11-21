@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-service-config
+data:
+  input-kubernetes.conf: |
+    [INPUT]
+      Name tail
+      Tag kube.*
+      Path /var/log/containers/*.log
+      Parser docker§

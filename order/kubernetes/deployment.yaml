@@ -5,7 +5,7 @@ metadata:
   labels:
     app: order
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: order
@@ -19,6 +19,11 @@ spec:
           image: "user11.azurecr.io/order:latest"
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: config-profile
+              mountPath: /tmp/config
+            - name: pvc-volume
+              mountPath: /mnt/data
           resources:
             requests:
               cpu: "200m"
@@ -30,11 +35,19 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 10
-          livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 120
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 5
+          # livenessProbe:
+          #   httpGet:
+          #     path: '/actuator/health'
+          #     port: 8080
+          #   initialDelaySeconds: 120
+          #   timeoutSeconds: 2
+          #   periodSeconds: 5
+          #   failureThreshold: 5
+      volumes: 
+        - name: config-profile
+          configMap: 
+            name: order-service-config
+        - name: pvc-volume
+          persistentVolumeClaim: 
+            claimName: azurefile 
+      
