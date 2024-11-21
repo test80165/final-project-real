@@ -134,7 +134,20 @@ www.msaez.io/#/188553391/storming/final-project
 ### hpa로 확인
 <img width="530" alt="스크린샷 2024-11-21 오후 4 23 26" src="https://github.com/user-attachments/assets/e3346884-e4f5-44c4-ac6d-a811d7bd8b5f">
 
-## 셀프힐링/무정지 배포 - Liveness/rediness
+## 셀프힐링/무정지 배포 - Liveness/readiness
+* readiness로 진행
+### readiness 설정
+
+<img width="258" alt="스크린샷 2024-11-22 오전 12 27 52" src="https://github.com/user-attachments/assets/b20706cc-8b32-40b2-b15c-d907569e1c1d">
+
+### siege로 60초간 서비스 호출 및 가용성 100프로 확인
+
+<img width="445" alt="스크린샷 2024-11-22 오전 12 26 47" src="https://github.com/user-attachments/assets/9d69b585-c3c0-4e8b-8b80-858bfcce093b">
+
+### siege 호출동안 두번의 배포 진행
+
+<img width="723" alt="스크린샷 2024-11-22 오전 12 27 38" src="https://github.com/user-attachments/assets/a6c6e265-8a95-4480-aadc-1266a025863d">
+
 
 ## 환경분리 - configMap/secret
 
