@@ -26,7 +26,7 @@ www.msaez.io/#/188553391/storming/final-project
 
 # MSA 개발
 
-## 분산트랜잭션 - saga / 보상처리 - Compensation / 단일 진입점 - GateWay
+## 분산트랜잭션 - saga / 단일 진입점 - GateWay
 ### 테스트를 위한 기본 데이터 추가
 1) 상품 추가
    
@@ -112,7 +112,19 @@ www.msaez.io/#/188553391/storming/final-project
 
 <img width="910" alt="스크린샷 2024-11-21 오후 2 16 59" src="https://github.com/user-attachments/assets/5f4daa68-056c-43a1-a8fb-b1d3f566ef00">
 
-### 보상처리 - 배송실패로 인벤토리 복구
+## 보상처리 - 배송실패로 인벤토리 복구 - Compensation 
+
+### 인벤토리 초기화
+<img width="903" alt="스크린샷 2024-11-22 오후 2 44 10" src="https://github.com/user-attachments/assets/f7c3ab63-abaa-4b87-b9ad-33faaf88e98d">
+
+### 주문 요청
+<img width="895" alt="스크린샷 2024-11-22 오후 2 44 38" src="https://github.com/user-attachments/assets/1c8abe72-8fb5-4a2d-bd9e-4f9f411ea05a">
+
+### 주문에러
+<img width="1199" alt="스크린샷 2024-11-22 오후 2 45 40" src="https://github.com/user-attachments/assets/0c3131aa-435f-48cb-b19e-37d9886197ca">
+
+### 인벤토리 원복
+<img width="638" alt="스크린샷 2024-11-22 오후 2 45 02" src="https://github.com/user-attachments/assets/4a98ed65-4867-434c-86ba-cc9ba16468eb">
 
 
 
