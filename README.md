@@ -11,8 +11,7 @@ pay 잔액으로 상품 구매
 
 ### 클라우드 아키텍처(inner- outer)
 
-<img width="351" alt="스크린샷 2024-11-22 오후 3 46 34" src="https://github.com/user-attachments/assets/15f26979-3149-4b18-8008-c26b124f0365">
-
+<img width="529" alt="스크린샷 2024-11-22 오후 3 47 43" src="https://github.com/user-attachments/assets/39a682e9-a3d3-4506-848e-ea4c2e655dba">
 
 
 ### 이벤트 스토밍 결과
