@@ -193,3 +193,12 @@ www.msaez.io/#/188553391/storming/final-project
 ### grafana 기본 템플릿을 이용한 부하 모니터링 
 
 <img width="1907" alt="스크린샷 2024-11-22 오전 2 28 12" src="https://github.com/user-attachments/assets/8b7734af-97ba-4c9a-94e1-29d20e343277">
+
+
+### 시즈로 부하주기
+
+<img width="580" alt="스크린샷 2024-11-22 오전 10 17 58" src="https://github.com/user-attachments/assets/2b49bd63-ef12-4a2f-a649-034d8b082099">
+
+### 그라파나에서 리소스 확인
+
+<img width="1406" alt="스크린샷 2024-11-22 오전 10 18 30" src="https://github.com/user-attachments/assets/cc5245b1-38f6-4923-bdba-e29014b5579a">
