@@ -192,9 +192,11 @@ www.msaez.io/#/188553391/storming/final-project
 
 <img width="632" alt="스크린샷 2024-11-22 오전 1 57 21" src="https://github.com/user-attachments/assets/60eec3e7-f3b3-46b7-96ae-7d68bc926f56">
 
-### loki 
+### loki
 
 <img width="1622" alt="스크린샷 2024-11-22 오전 2 15 57" src="https://github.com/user-attachments/assets/3ee31366-dad3-4a1e-af71-89003f0da483">
+
+<img width="1419" alt="스크린샷 2024-11-22 오후 1 53 34" src="https://github.com/user-attachments/assets/9b1ffddc-947f-4f60-8423-91423c3f6f2f">
 
 ### grafana 기본 템플릿을 이용한 부하 모니터링 
 
