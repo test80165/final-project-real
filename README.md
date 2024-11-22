@@ -199,6 +199,10 @@ www.msaez.io/#/188553391/storming/final-project
 <img width="734" alt="스크린샷 2024-11-22 오전 1 48 30" src="https://github.com/user-attachments/assets/7ab59639-5341-411e-a91d-bb607f6f5a26">
 
 ## 서비스 매쉬
+=> istio 기존 order 파드에 인젝션을 위해 설정 추가
+=> istio 에드온을 이용해서 프로메테우스와 그라파나 설정(모니터링 파트의 그라파나 템플릿을 이용한 모니터링 증빙)
+
+<img width="331" alt="스크린샷 2024-11-22 오후 2 52 50" src="https://github.com/user-attachments/assets/11d5304d-069e-483e-a912-5e17146bb0de">
 
 ## 모니터링
 
