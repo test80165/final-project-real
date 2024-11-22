@@ -15,6 +15,8 @@
 ## 이벤트 스토밍 결과
 www.msaez.io/#/188553391/storming/final-project
 
+<img width="856" alt="스크린샷 2024-11-22 오전 11 05 35" src="https://github.com/user-attachments/assets/6e21477b-e88d-4543-b4b7-33ec1bd28526">
+
 
 ## 헥사고날 아키텍처 다이어그램 도출
 
