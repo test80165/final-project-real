@@ -7,16 +7,13 @@ pay 잔액으로 상품 구매
 5. 구매를 취소하면 상품 발송이 취소되어 상품 개수가 원복되고 결제가 취소되며 결제 금액이 복구된다.
 6. 고객이 상품 발송정보를 확인 할 수 있다.
 
-
-### 클라우드 아키텍처
-
-<img width="388" alt="스크린샷 2024-11-22 오후 1 37 28" src="https://github.com/user-attachments/assets/f1e5aadc-cf1c-4635-9c6b-9557b1a6f1fd">
-
-### 클라우드 아키텍처(inner)
-
-<img width="388" alt="스크린샷 2024-11-22 오후 1 37 28" src="https://github.com/user-attachments/assets/f1e5aadc-cf1c-4635-9c6b-9557b1a6f1fd">
-
 # 분석 설계
+
+### 클라우드 아키텍처(inner- outer)
+
+<img width="388" alt="스크린샷 2024-11-22 오후 1 37 28" src="https://github.com/user-attachments/assets/f1e5aadc-cf1c-4635-9c6b-9557b1a6f1fd">
+
+
 
 ### 이벤트 스토밍 결과
 www.msaez.io/#/188553391/storming/final-project
