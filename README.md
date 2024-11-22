@@ -63,7 +63,7 @@ www.msaez.io/#/188553391/storming/final-project
 <img width="650" alt="스크린샷 2024-11-21 오후 1 43 55" src="https://github.com/user-attachments/assets/f6ea1bd3-9094-4484-963d-c9e5983babe5">
 
 
-### 취소시 보상처리 
+### 취소시 처리
 1) 상품주문 취소
    
 => 오더 서비스 쪽에 주문취소 요청
@@ -111,6 +111,10 @@ www.msaez.io/#/188553391/storming/final-project
 => gateway통해서 호출했을때, 마이페이지에서는 정상 조회
 
 <img width="910" alt="스크린샷 2024-11-21 오후 2 16 59" src="https://github.com/user-attachments/assets/5f4daa68-056c-43a1-a8fb-b1d3f566ef00">
+
+### 보상처리 - 배송실패로 인벤토리 복구
+
+
 
 ## 클라우드 배포 - Container 운영
 * AZURE DEVOPS CI/CD를 사용하여 진행하엿습니다.
